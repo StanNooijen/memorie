@@ -15,24 +15,12 @@ const img8 = "images/dragonball/7.png";
 const Cards = [img1, img2, img3, img4, img5, img6, img7, img8, img1, img2, img3, img4, img5, img6, img7, img8];
 const shuffledArray = Cards.sort((a, b) => 0.5 - Math.random());
 
-function scoreboard(){
-    if (score == 0) {
-        document.getElementById("score").innerText = "U WON";
-    }
-    else if (score > 0) {
-        document.getElementById("score").innerText = "u still need " + score + " pairs";
-        document.getElementById("delete")
-    }
-}
-
 function flipCard(card1) {
     if (noFlip == false) {
-        document.getElementById(card1).style.transition = 5;
         document.getElementById(card1).src = shuffledArray[card1];
         CheckCardClicked(card1);
     }
 }
-
 
 function CheckCardClicked(card1) {
     if (wasClicked1 == true && wasClicked2 == false) {
@@ -77,5 +65,14 @@ function checkCardSame() {
         wasClicked1 = false;
         wasClicked2 = false;
         console.log("no")
+    }
+}
+
+function scoreboard(){
+    if (score == 0) {
+        document.getElementById("score").innerText = "U WON";
+    }
+    else if (score > 0) {
+        document.getElementById("score").innerText = "u still need " + score + " pairs";
     }
 }

@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <link href="./styles/theme.css" rel="stylesheet">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 </head>
 
-<body style="background-image: url('images/dragonball/bg.png');">
-    <div class="container">
-        <div class="row" style="scale: 50%;">
-            <div class="col"><img src="images/dragonball/0.png" alt=""></div>
-            <div class="col"><img src="images/dragonball/1.png" alt=""></div>
-            <div class="col"><img src="images/dragonball/10.png" alt=""></div>
-            <div class="col"><img src="images/dragonball/11.png" alt=""></div>
+<body class="box" onload="scoreboard(), countdown();">
+        <div>
+                <p id="score" class="score"></p>
         </div>
-        <div class="row" style="scale: 50%;">
-            <div class="col"><img src="images/dragonball/12.png" alt=""></div>
-            <div class="col"><img src="images/dragonball/13.png" alt=""></div>
-            <div class="col"><img src="images/dragonball/14.png" alt=""></div>
-            <div class="col"><img src="images/dragonball/15.png" alt=""></div>
+        <div class="container text-center">
+                <div class="row">
+                        <div class="col"><input onclick="flipCard(0)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="0" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(1)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="1" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(2)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="2" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(3)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="3" id="delete"></input></div>
+                </div>
+                <div class="row">
+                        <div class="col"><input onclick="flipCard(4)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="4" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(5)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="5" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(6)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="6" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(7)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="7" id="delete"></input></div>
+                </div>
+                <div class="row">
+                        <div class="col"><input onclick="flipCard(8)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="8" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(9)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="9" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(10)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="10" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(11)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="11" id="delete"></input></div>
+                </div>
+                <div class="row">
+                        <div class="col"><input onclick="flipCard(12)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="12" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(13)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="13" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(14)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="14" id="delete"></input></div>
+                        <div class="col"><input onclick="flipCard(15)" style="height: 200px;"
+                                        src="/images/dragonball/tile.png" type="image" id="15" id="delete"></input></div>
+                </div>
         </div>
-        <div class="col"><img src="images/dragonball/16.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/17.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/18.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/2.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/3.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/4.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/5.png" alt=""></div>
-        <div class="col"><img src="images/dragonball/6.png" alt=""></div>
-    </div>
-    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 <script src="./scripts/main.js" type="javascript"></script>
 
 </html>

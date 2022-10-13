@@ -1,3 +1,13 @@
-.body{
+
+
+.score{
+    background-color: black;
+    text-align: center; 
+    color:white;
+    font-size: 5rem;
+}
+
+.box{
+    background-image: url("/images/dragonball/bg.png");
     background-repeat: no-repeat;
 }

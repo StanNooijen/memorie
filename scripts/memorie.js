@@ -15,11 +15,15 @@ const img8 = "images/animals/white-tiger.png";
 const Cards = [img1, img2, img3, img4, img5, img6, img7, img8, img1, img2, img3, img4, img5, img6, img7, img8];
 const shuffledArray = Cards.sort((a, b) => 0.5 - Math.random());
 
-function flipCard(card1) {
+function flipCardAnimation(card1) {
     if (noFlip == false) {
-        document.getElementById(card1).src = shuffledArray[card1];
-        CheckCardClicked(card1);
+        flipCard(card1);
     }
+}
+
+function flipCard(card1){
+    document.getElementById(card1).src = shuffledArray[card1];
+    CheckCardClicked(card1);
 }
 
 function CheckCardClicked(card1) {
@@ -28,7 +32,7 @@ function CheckCardClicked(card1) {
         wasClicked2 = true;
         console.log(wasClicked2);
         noFlip = true;
-        setTimeout(checkCardSame, 750);
+        setTimeout(checkCardSame, 1500);
 
 
     } else if (wasClicked1 == false) {

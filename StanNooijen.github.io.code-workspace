@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../Users/stann/OneDrive/Documenten/GitHub/StanNooijen.github.io"
+		},
+		{
+			"path": "../../../Users/stann/OneDrive/Documenten/GitHub/toDoList"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "toDoList"
+	}
+}
